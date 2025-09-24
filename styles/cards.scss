@@ -1,0 +1,82 @@
+@import 'variables';
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.loading-message, .error-message {
+    font-size: 1.2rem;
+    color: #666;
+    grid-column: 1 / -1; // Ocupa todas as colunas do grid
+    text-align: center;
+}
+
+.card-wrapper {
+    // A borda gradiente é criada aqui!
+    // Usamos um gradiente cônico como fundo do wrapper.
+    background: conic-gradient(from 180deg at 50% 50%, #ffc857, #b49fcc, #7ce4f2, #8deeb7, #ffc857);
+    border-radius: 12px;
+    padding: 3px; // A "espessura" da nossa borda
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.card {
+    background: $light-text;
+    border-radius: 10px; // Um pouco menor que o wrapper para o preenchimento aparecer
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+    }
+
+    &__title {
+        font-family: $font-headings;
+        font-size: 1.5rem;
+        color: $dark-text;
+        line-height: 1.3;
+        flex-grow: 1; // Garante que o título empurre o botão para baixo
+        margin-bottom: 20px;
+    }
+}
+
+.card-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #F9D056 0%, #F3B536 100%);
+    border: 2px solid #E48D2A;
+    color: $dark-text;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(180deg, lighten(#F9D056, 5%) 0%, lighten(#F3B536, 5%) 100%);
+    }
+
+    &::after {
+        content: '>';
+        font-weight: bold;
+    }
+}
