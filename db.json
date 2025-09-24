@@ -1,0 +1,19 @@
+{
+  "featuredProducts": [
+    {
+      "image": "https://placehold.co/400x300/e0e0e0/333?text=Coleção+Treinador",
+      "title": "Coleção Treinador Avançado de Escarlate e Violeta — Evoluções Prismáticas",
+      "buttonText": "Encontrar um Revendedor"
+    },
+    {
+      "image": "https://placehold.co/400x300/e0e0e0/333?text=Combo+de+Pacotes",
+      "title": "Combo de pacotes de booster de Escarlate e Violeta — Evoluções Prismáticas",
+      "buttonText": "Encontrar um Revendedor"
+    },
+    {
+      "image": "https://placehold.co/400x300/e0e0e0/333?text=Coleção+Especial",
+      "title": "Coleção Especial de Escarlate e Violeta — Evoluções Prismáticas",
+      "buttonText": "Encontrar um Revendedor"
+    }
+  ]
+}
